@@ -9,6 +9,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <title>Frontend Bootcamp</title>
 </head>
 
@@ -45,7 +46,7 @@
 
     <!-- Showcases -->
 
-    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <section class="showcase bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div>
@@ -369,9 +370,78 @@
         </div>
     </section>
 
+    <!-- Contact & Map Section -->
+    <section class="p-3 ">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">
+                        Contact Info
+                    </h2>
+
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location</span>
+                            <p>50 main street Booston MA</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone:</span>
+                            <p>(555) 555-555</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Phone:</span>
+                            <p>(333) 333-333</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Email:</span>
+                            <p>arbazkhan@gmail.com</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Email:</span>
+                            <p>student@gmail.com</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md mapsystem">
+                    <div id="map">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <section class="footer p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <div class="lead">
+                <p>Copyright &copy; 2021 Frontend Bootcamp</p>
+            </div>
+        </div>
+    </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYXJiYXotMjAiLCJhIjoiY2t6bGJ5amJlMTNmcTJ2bGw2eG02cWI0OCJ9.tvNszbHhB4K7SHDwRHh9hA'
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-71.060982, 42.35725],
+            zoom: 18,
+        });
+    </script>
+
 </body>
 
 </html>
